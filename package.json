@@ -1,0 +1,9 @@
+{
+  "name": "neon-drift",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A self-contained Neon Drift browser game.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

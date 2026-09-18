@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Drift</title>
+<link rel="stylesheet" href="neon-drift-easy.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="tint"></div><div id="vig"></div><div id="scan"></div>
+
+<div id="hud" class="hide">
+  <div class="panel tl">
+    <div id="score">0</div>
+    <div class="meta"><span>Best <b id="hi">0</b></span><span>Wave <b id="wave">1</b></span><span>Level <b id="lvl">1</b></span></div>
+    <div class="bw"><span>Health</span><div class="bar"><i id="hpF"></i></div><span id="hpT">100</span></div>
+    <div class="bw"><span>Shield</span><div class="bar"><i id="shF"></i></div><span id="shT">40</span></div>
+    <div class="bw"><span>XP</span><div class="bar"><i id="xpF"></i></div><span></span></div>
+  </div>
+  <div class="panel tr">
+    <div id="combo"></div>
+    <div class="bar" id="comboBar"><i id="comboF"></i></div>
+    <div id="mult">×1.0</div>
+    <div class="small">Kills <b id="kills">0</b> &nbsp; Near misses <b id="grazes">0</b></div>
+  </div>
+  <div id="bossbar" class="hide"><div id="bossname">OVERSEER</div><div class="bar"><i id="bossF"></i></div></div>
+  <div id="dock">
+    <div class="ab" id="abDash" title="Dash"><div class="ic">⇶</div><div class="k">SHIFT</div><div class="cd"></div></div>
+    <div class="ab" id="abHole" title="Black hole"><div class="ic">◉</div><div class="k">Q</div><div class="cd"></div></div>
+    <div class="ab" id="abPulse" title="Phase burst"><div class="ic">✹</div><div class="k">R</div><div class="cd"></div></div>
+    <div class="ab" id="abGuard" title="Flux guard"><div class="ic">⬡</div><div class="k">F</div><div class="cd"></div></div>
+    <div id="odw"><div class="lab">Power bar — fly close to bullets and get combos to fill it</div><div class="bar"><i id="odF"></i></div></div>
+    <div class="ab" id="abChrono" title="Slow time"><div class="ic">⧗</div><div class="k">E</div><div class="cd"></div></div>
+  </div>
+</div>
+
+<div id="banner"><div id="bT"></div><div id="bS"></div></div>
+
+<div id="menu" class="ov show">
+  <div class="title" data-t="NEON DRIFT">NEON DRIFT</div>
+  <div class="subt">SPACE SHOOTER</div>
+  <div class="keys">
+    <div><kbd>WASD</kbd>Move</div>
+    <div><kbd>Mouse</kbd>Aim, hold click to shoot</div>
+    <div><kbd>Shift</kbd>Dash (quick safe jump)</div>
+    <div><kbd>Q</kbd>Black hole at your mouse</div>
+    <div><kbd>R</kbd>Phase burst clears bullets and hurts enemies</div>
+    <div><kbd>F</kbd>Flux guard restores shield and blocks damage</div>
+    <div><kbd>E</kbd>Slow time (when power bar is full)</div>
+    <div><kbd>Esc</kbd>Pause <kbd>M</kbd>Mute</div>
+  </div>
+  <div class="gloss">
+    <div><b>Health</b>Your life. At 0 the game ends.</div>
+    <div><b>Shield</b>Blue ring that takes hits first. Refills by itself.</div>
+    <div><b>XP</b>Yellow dots from enemies. Fill the bar to level up.</div>
+    <div><b>Level up</b>Pick one power-up to get stronger.</div>
+    <div><b>Power bar</b>Fills when you kill or fly close to bullets. Full = slow time.</div>
+    <div><b>Combo</b>Kill fast without getting hit for more points.</div>
+    <div><b>Near miss</b>A bullet passed very close to you. Gives points.</div>
+    <div><b>Dash</b>A quick jump. Bullets can't hurt you during it.</div>
+    <div><b>Black hole</b>Pulls enemies in, hurts them, then blows up.</div>
+    <div><b>Wave</b>One group of enemies. Clear it to get the next one.</div>
+    <div><b>Boss</b>A huge enemy that comes every 5 waves.</div>
+    <div><b>Gold ring enemy</b>A stronger enemy. Gives more points.</div>
+  </div>
+  <button class="btn" id="startBtn">Start</button>
+  <div class="foot">Tip: dash into small enemies to crash into them. Best score: <b id="menuHi">0</b></div>
+</div>
+
+<div id="upgrade" class="ov">
+  <h2>Level up!</h2>
+  <div class="sub2">Pick one power-up (press 1, 2 or 3)</div>
+  <div id="cards"></div>
+  <button class="btn ghost" id="rerollBtn">Show new choices</button>
+</div>
+
+<div id="pause" class="ov">
+  <h2>Paused</h2>
+  <div class="sub2">Your power-ups</div>
+  <div id="build"></div>
+  <div class="row"><button class="btn" id="resumeBtn">Resume</button><button class="btn ghost" id="quitBtn">Quit game</button></div>
+</div>
+
+<div id="over" class="ov">
+  <h2>Game over</h2>
+  <div id="newbest"></div>
+  <div class="stats">
+    <div><span>Score</span><b id="oScore">0</b></div>
+    <div><span>Wave</span><b id="oWave">0</b></div>
+    <div><span>Level</span><b id="oLvl">0</b></div>
+    <div><span>Kills</span><b id="oKills">0</b></div>
+    <div><span>Best combo</span><b id="oCombo">0</b></div>
+    <div><span>Time</span><b id="oTime">0</b></div>
+  </div>
+  <button class="btn" id="retryBtn">Play again</button>
+</div>
+
+<script src="neon-drift-easy.js"></script>
+</body>
+</html>
