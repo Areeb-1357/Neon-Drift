@@ -1,21 +1,35 @@
 # Neon Drift
 
-Neon Drift is a self-contained browser game with no build step or external dependencies. `index.html` is the GitHub Pages entry point; `neon-drift-easy.html` remains the editable source copy.
+Neon Drift is a fast-paced neon arcade survival game where you pilot a glowing ship through waves of enemies, dodge incoming attacks, and keep moving as the battlefield gets more intense. The goal is simple: survive as long as possible, build up your power, and outlast increasingly aggressive enemy formations.
 
-## Run locally
+## About the Game
 
-Requirements: Node.js 18 or newer.
+This game blends arcade shooter action with a stylish sci-fi aesthetic. Every run is a mix of movement, timing, and upgrades. You fight through chaotic enemy squads, collect energy orbs, and choose upgrades that shape your build as you progress.
 
-```powershell
-npm start
-```
+## Gameplay
 
-Open <http://127.0.0.1:8000/> in a browser. Set `PORT` to use another port, for example:
+- Dodge enemy attacks and survive wave after wave
+- Fire continuously at incoming threats
+- Collect drops to gain power and recover momentum
+- Upgrade your ship between stages to improve offense and defense
+- Adapt your strategy as enemy patterns become faster and more dangerous
 
-```powershell
-$env:PORT=8080; npm start
-```
+## Features
 
-## GitHub Pages
+- Neon cyberpunk visuals
+- Smooth arcade-style movement and combat
+- Multiple enemy types and escalating difficulty
+- Upgrade choices that change your playstyle
+- Short, replayable survival runs
 
-Publish the repository root with GitHub Pages. It will serve `index.html` directly; `server.js` is only for local development.
+## Controls
+
+- Move: WASD or Arrow Keys
+- Aim: Mouse
+- Shoot: Left Click
+- Dash: Shift
+- Special Ability: Keyboard shortcuts during play
+
+## Project Notes
+
+Neon Drift is designed as a lightweight browser game with a polished arcade feel, built for quick play sessions and high-energy action. It is meant to be easy to run, easy to update, and ready for deployment on a static hosting platform.
