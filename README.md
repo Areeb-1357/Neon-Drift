@@ -1,5 +1,9 @@
 # Neon Drift
 
+## Live Demo
+
+[Play Neon Drift](https://neon-drift-ten.vercel.app/)
+
 Neon Drift is a fast-paced neon arcade survival game where you pilot a glowing ship through waves of enemies, dodge incoming attacks, and keep moving as the battlefield gets more intense. The goal is simple: survive as long as possible, build up your power, and outlast increasingly aggressive enemy formations.
 
 ## About the Game
